@@ -1,6 +1,6 @@
 # Kartik
 
-> 16. OSS. AI.
+> 16. OSS. AI. 16. OSS. AI. Building agent infra. Contributor to synara and remodex.
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?lines=building+agent+infra;macos-native+when+it+counts;rust+for+perf,+python+for+glue&center=true&vCenter=true&width=600&height=80&color=2F81F7&background=00000000)](https://git.io/typing-svg)
 
