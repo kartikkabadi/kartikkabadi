@@ -53,14 +53,6 @@
 <h3>Activity</h3>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=kartikkabadi&theme=dark&hide_border=true&background=0D1117#gh-dark-mode-only">
-  <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com?user=kartikkabadi&theme=light&hide_border=true#gh-light-mode-only">
-  <img alt="GitHub Streak" src="https://streak-stats.demolab.com?user=kartikkabadi&theme=dark&hide_border=true">
-</picture>
-
-<br><br>
-
-<picture>
   <source media="(prefers-color-scheme: dark)" srcset="./dist/github-snake-dark.svg#gh-dark-mode-only">
   <source media="(prefers-color-scheme: light)" srcset="./dist/github-snake.svg#gh-light-mode-only">
   <img alt="Contribution Snake" src="./dist/github-snake.svg">
