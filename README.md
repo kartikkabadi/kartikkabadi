@@ -2,7 +2,7 @@
 
 > 16. OSS. AI.
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?lines=building+agent+infra+on+cloudflare+workers;macos-native+when+it+counts;rust+for+perf,+python+for+glue&center=true&vCenter=true&width=600&height=80&color=2F81F7&background=00000000)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?lines=building+agent+infra;macos-native+when+it+counts;rust+for+perf,+python+for+glue&center=true&vCenter=true&width=600&height=80&color=2F81F7&background=00000000)](https://git.io/typing-svg)
 
 <table>
   <tr>
