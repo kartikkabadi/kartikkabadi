@@ -4,8 +4,6 @@
   </a>
 </p>
 
-<h1 align="center">Kartik</h1>
-
 <p align="center"><strong>16. OSS. AI.</strong></p>
 
 <p align="center">
