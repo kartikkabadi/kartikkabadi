@@ -4,18 +4,7 @@
   </a>
 </p>
 
-<p align="center">
-  <img src="./assets/avatar.png" width="128" alt="Kartik" />
-</p>
-
-<h1 align="center">
-  Kartik
-  <img src="./assets/verified.svg" width="22" alt="Verified" />
-</h1>
-
-<p align="center">
-  <a href="https://x.com/1kartikkabadi1">@1kartikkabadi1</a>
-</p>
+<h1 align="center">Kartik</h1>
 
 <p align="center"><strong>16. OSS. AI.</strong></p>
 
