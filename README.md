@@ -9,10 +9,6 @@
   <img src="./assets/verified.svg" width="22" alt="Verified" />
 </h1>
 
-<p align="center">
-  <a href="https://x.com/1kartikkabadi1">@1kartikkabadi1</a>
-</p>
-
 <p align="center"><strong>16. OSS. AI.</strong></p>
 
 <p align="center">
