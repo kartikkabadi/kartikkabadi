@@ -4,10 +4,7 @@
   </a>
 </p>
 
-<h1 align="center">
-  Kartik
-  <img src="./assets/verified.svg" width="22" alt="Verified" />
-</h1>
+<h1 align="center">Kartik</h1>
 
 <p align="center"><strong>16. OSS. AI.</strong></p>
 
