@@ -4,10 +4,6 @@
   </a>
 </p>
 
-<p align="center">
-  <img src="./assets/avatar.png" width="128" alt="Kartik" />
-</p>
-
 <h1 align="center">
   Kartik
   <img src="./assets/verified.svg" width="22" alt="Verified" />
