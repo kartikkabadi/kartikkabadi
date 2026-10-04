@@ -15,9 +15,5 @@
 <p align="center">
   <a href="https://github.com/Emanuele-web04/synara">Synara</a>
   ·
-  <a href="https://github.com/kartikkabadi/synara-beta">synara-beta</a>
-  ·
-  <a href="https://trysynara.com">trysynara.com</a>
-  ·
   <a href="https://x.com/1kartikkabadi1">X</a>
 </p>
