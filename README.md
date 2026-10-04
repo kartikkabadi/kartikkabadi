@@ -16,4 +16,6 @@
   <a href="https://github.com/Emanuele-web04/synara">Synara</a>
   ·
   <a href="https://x.com/1kartikkabadi1">X</a>
+  ·
+  <a href="https://kartikkabadi.com">kartikkabadi.com</a>
 </p>
