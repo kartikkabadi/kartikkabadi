@@ -5,17 +5,27 @@ on:
     - cron: "0 0 * * 0"  # weekly, Sunday 00:00 UTC
   workflow_dispatch:
 
+permissions: {}
+
+concurrency:
+  group: profile-metrics
+  cancel-in-progress: false
+
 jobs:
   metrics:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
-
-      - uses: lowlighter/metrics@latest
+      - uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34.0
         with:
-          token: ${{ secrets.METRICS_TOKEN }}
+          # Public profile data only; repository writes use the ephemeral token.
+          token: ${{ secrets.METRICS_READONLY_TOKEN }}
+          user: kartikkabadi
+          committer_token: ${{ github.token }}
+          output_action: commit
+          use_prebuilt_image: no
           filename: github-metrics-light.svg
           base: header, activity, repositories
           plugin_languages: yes
@@ -26,9 +36,14 @@ jobs:
           config_colors: github-light
           config_display: large
 
-      - uses: lowlighter/metrics@latest
+      - uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34.0
         with:
-          token: ${{ secrets.METRICS_TOKEN }}
+          # Public profile data only; repository writes use the ephemeral token.
+          token: ${{ secrets.METRICS_READONLY_TOKEN }}
+          user: kartikkabadi
+          committer_token: ${{ github.token }}
+          output_action: commit
+          use_prebuilt_image: no
           filename: github-metrics-dark.svg
           base: header, activity, repositories
           plugin_languages: yes
@@ -39,7 +54,3 @@ jobs:
           config_colors: github-dark
           config_display: large
 
-      - uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "Update GitHub metrics"
-          file_pattern: "github-metrics-*.svg"
