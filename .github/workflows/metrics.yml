@@ -18,6 +18,22 @@ jobs:
     permissions:
       contents: write
     steps:
+      # Build before any PAT or committer token is passed to the action.
+      # The action reuses this local image instead of building with its .env file.
+      - name: Build pinned metrics image without credentials
+        shell: bash
+        run: |
+          set -euo pipefail
+          build_dir="$(mktemp -d)"
+          trap 'rm -rf "$build_dir"' EXIT
+          curl --fail --silent --show-error --location --retry 3 \
+            https://github.com/lowlighter/metrics/archive/65836723097537a54cd8eb90f61839426b4266b6.tar.gz \
+            -o "$build_dir/source.tar.gz"
+          mkdir "$build_dir/source"
+          tar -xzf "$build_dir/source.tar.gz" -C "$build_dir/source" --strip-components=1
+          printf '\n.env\n.env.*\n' >> "$build_dir/source/.dockerignore"
+          docker build --tag metrics:3.34.0 "$build_dir/source"
+
       - uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34.0
         with:
           # Public profile data only; repository writes use the ephemeral token.
