@@ -34,7 +34,10 @@ jobs:
           printf '\n.env\n.env.*\n' >> "$build_dir/source/.dockerignore"
           # Upstream Dockerfile omits xzcat needed by current Nokogiri builds.
           sed -i 's/apt-get install -y ruby-full /apt-get install -y xz-utils ruby-full /' "$build_dir/source/Dockerfile"
-          docker build --tag metrics:3.34.0 "$build_dir/source"
+          # System Chrome is installed above; do not download another browser during npm ci.
+          sed -i '/^FROM /a ENV PUPPETEER_SKIP_DOWNLOAD=true PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true' "$build_dir/source/Dockerfile"
+          sed -i 's/&& npm ci /\&\& npm ci --loglevel=info /' "$build_dir/source/Dockerfile"
+          docker build --progress=plain --tag metrics:3.34.0 "$build_dir/source"
 
       - uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34.0
         with:
