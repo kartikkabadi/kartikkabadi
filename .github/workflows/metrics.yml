@@ -32,6 +32,8 @@ jobs:
           mkdir "$build_dir/source"
           tar -xzf "$build_dir/source.tar.gz" -C "$build_dir/source" --strip-components=1
           printf '\n.env\n.env.*\n' >> "$build_dir/source/.dockerignore"
+          # Upstream Dockerfile omits xzcat needed by current Nokogiri builds.
+          sed -i 's/apt-get install -y ruby-full /apt-get install -y xz-utils ruby-full /' "$build_dir/source/Dockerfile"
           docker build --tag metrics:3.34.0 "$build_dir/source"
 
       - uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34.0
